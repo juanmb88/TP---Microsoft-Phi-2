@@ -1,350 +1,136 @@
 [
-    {
-      "messages": [
-        { "role": "user", "content": "¿Qué son los números naturales?" },
-        { "role": "assistant", "content": "Los números naturales (ℕ) son el conjunto de números enteros positivos: 1, 2, 3, 4, 5,... Se utilizan para contar y ordenar elementos." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "Ejemplos de números enteros" },
-        { "role": "assistant", "content": "El conjunto de enteros (ℤ) incluye: -3, -2, -1, 0, 1, 2, 3. Son números sin parte decimal, positivos y negativos." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "¿Es 5/3 un número racional?" },
-        { "role": "assistant", "content": "Sí, 5/3 es racional (ℚ) porque puede expresarse como fracción de dos enteros. Su decimal es 1.666... periódico." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "Clasifica π en los conjuntos numéricos" },
-        { "role": "assistant", "content": "π (pi) es un número irracional (𝕀) y real (ℝ). Su decimal es infinito no periódico: 3.1415926535..." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "¿Cuántos números primos hay entre 1 y 10?" },
-        { "role": "assistant", "content": "Hay 4 números primos: 2, 3, 5 y 7. Los primos solo son divisibles por 1 y sí mismos." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "Diferencia entre enteros y naturales" },
-        { "role": "assistant", "content": "ℕ incluye solo positivos (1,2,3...), mientras que ℤ añade negativos y cero: ...-2,-1,0,1,2..." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "¿Es -4 un número natural?" },
-        { "role": "assistant", "content": "No. -4 pertenece a los enteros (ℤ) pero no a los naturales (ℕ), que solo contienen positivos." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "¿Por qué √9 es racional?" },
-        { "role": "assistant", "content": "√9 = 3, que es entero y por tanto racional. Los irracionales tienen raíces no exactas como √2." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "Ejemplo de número par y primo" },
-        { "role": "assistant", "content": "El único número par y primo es 2. Todos los demás pares son divisibles por 2 y por tanto no primos." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "¿A qué conjunto pertenece 0?" },
-        { "role": "assistant", "content": "0 es entero (ℤ), racional (ℚ) y real (ℝ). No es natural en la definición clásica, pero sí en algunas modernas." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "Clasifica 1.5 en los conjuntos numéricos" },
-        { "role": "assistant", "content": "1.5 es racional (ℚ) y real (ℝ). Puede expresarse como 3/2, por lo que no es entero ni natural." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "¿Es 1 un número primo?" },
-        { "role": "assistant", "content": "No. Por definición, los primos tienen exactamente dos divisores distintos. El 1 solo tiene un divisor." }
-      ]
-    },
-    {
-      "messages": [
-        { "role": "user", "content": "¿Cómo se relacionan ℕ, ℤ y ℚ?" },
-        { "role": "assistant", "content": "ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Los naturales están contenidos en enteros, estos en racionales, y todos en reales." }
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve: 3x + 5 = 2x - 7"},
-        {"role": "assistant", "content": "3x - 2x = -7 - 5 → x = -12. Ecuación lineal: despeje mediante operaciones inversas"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 2x² - 8x + 6 = 0"},
-        {"role": "assistant", "content": "Fórmula cuadrática: x = [8 ± √(64-48)]/4 = [8 ± 4]/4 → x₁=3, x₂=1. Factorizable: 2(x-1)(x-3)=0"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve |x - 4| = 9"},
-        {"role": "assistant", "content": "Caso 1: x - 4 = 9 → x=13. Caso 2: x - 4 = -9 → x=-5. Soluciones: x=13 y x=-5"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve (2x+1)/(x-3) = 5"},
-        {"role": "assistant", "content": "Multiplicar cruzado: 2x+1 = 5(x-3) → 2x+1=5x-15 → -3x=-16 → x=16/3. Verificar: denominador ≠ 0"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve √(3x+4) = 5"},
-        {"role": "assistant", "content": "Elevar al cuadrado: 3x+4=25 → 3x=21 → x=7. Comprobación: √(25)=5 ✓"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve x³ - 6x² + 11x - 6 = 0"},
-        {"role": "assistant", "content": "Factorizando: (x-1)(x-2)(x-3)=0 → Raíces: x=1, x=2, x=3. Polinomio cúbico por Ruffini"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 5^(x-2) = 25"},
-        {"role": "assistant", "content": "Expresar 25=5²: 5^(x-2)=5² → x-2=2 → x=4. Ecuación exponencial por misma base"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve log₂(x+3) = 4"},
-        {"role": "assistant", "content": "Forma exponencial: 2⁴ = x+3 → 16 = x+3 → x=13. Verificar dominio: x+3>0"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve x⁴ - 5x² + 4 = 0"},
-        {"role": "assistant", "content": "Sustitución y=x²: y²-5y+4=0 → y=4 e y=1 → x=±2 y x=±1. Ecuación bicuadrada"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve √(x+5) + √(x) = 5"},
-        {"role": "assistant", "content": "Aislar radical: √(x+5)=5-√x → elevar al cuadrado: x+5=25-10√x +x → 10√x=20 → √x=2 → x=4. Verificar solución"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve |x² - 5| = 4"},
-        {"role": "assistant", "content": "Caso 1: x²-5=4 → x²=9 → x=±3. Caso 2: x²-5=-4 → x²=1 → x=±1. Soluciones: ±1, ±3"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve (x+2)/(x-1) = (x-3)/(x+4)"},
-        {"role": "assistant", "content": "Multiplicar cruzado: (x+2)(x+4)=(x-1)(x-3) → x²+6x+8 = x²-4x+3 → 10x = -5 → x=-1/2. Verificar dominios"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 2x + 3 = 2x + 5"},
-        {"role": "assistant", "content": "2x - 2x = 5 - 3 → 0=2. No solución. Ecuación incompatible"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 3/(x²-1) + 2/(x-1) = 5"},
-        {"role": "assistant", "content": "Factor denominador: 3/[(x-1)(x+1)] + 2/(x-1) = 5 → MCD: (x-1)(x+1). Solución: x=2/5 (verificar exclusiones x≠±1)"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve √(2x-1) = x - 2"},
-        {"role": "assistant", "content": "Elevar al cuadrado: 2x-1 = x²-4x+4 → x²-6x+5=0 → x=5 y x=1. Comprobar: x=5 ✓, x=1 (falso). Solución única x=5"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 0.5x - 1.2 = 2.3x + 4.1"},
-        {"role": "assistant", "content": "0.5x - 2.3x = 4.1 + 1.2 → -1.8x = 5.3 → x = -53/18 ≈ -2.944. Ecuación lineal con decimales"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve x² - 6x + 2 = 0 usando completación de cuadrados"},
-        {"role": "assistant", "content": "x²-6x = -2 → (x-3)² -9 = -2 → (x-3)² = 7 → x = 3±√7. Solución exacta con radicales"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve x³ + 2x² - 5x - 6 = 0"},
-        {"role": "assistant", "content": "Por división sintética: raíz x=2 → (x-2)(x²+4x+3)=0 → x=2, x=-1, x=-3. Polinomio cúbico factorizado"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve |2x + 1| = |x - 3|"},
-        {"role": "assistant", "content": "Casos: 2x+1 = x-3 → x=-4; o 2x+1 = -(x-3) → 3x=2 → x=2/3. Soluciones: x=-4 y x=2/3"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve (x+2)/(x²-4) + 1/(x-2) = 3"},
-        {"role": "assistant", "content": "Factorizar denominador: (x+2)/[(x-2)(x+2)] + 1/(x-2) = 3 → 1/(x-2) + 1/(x-2) = 3 → 2/(x-2)=3 → x=2 + 2/3 = 8/3. Excluir x=±2"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve √(x+1) + √(2x) = 3"},
-        {"role": "assistant", "content": "Aislar √(x+1)=3-√(2x) → cuadrar: x+1=9-6√(2x)+2x → ordenar y cuadrar nuevamente. Solución final x=1 (verificar)"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 3^(2x) = 9^(x+1)"},
-        {"role": "assistant", "content": "Expresar 9=3²: 3^(2x) = (3²)^(x+1) → 2x = 2(x+1) → 2x=2x+2 → 0=2 → No solución"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve log(x) + log(x+3) = 1"},
-        {"role": "assistant", "content": "Propiedad logarítmica: log[x(x+3)] = 1 → x²+3x = 10 → x²+3x-10=0 → x=2 (x=-5 descartado). Dominio x>0"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve el sistema: 2x + y = 7; x² - y = 1"},
-        {"role": "assistant", "content": "Despejar y=7-2x en segunda ecuación: x² - (7-2x) =1 → x²+2x-8=0 → x=2 → y=3; x=-4 → y=15. Soluciones: (2,3) y (-4,15)"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "La suma de tres enteros consecutivos es 78. Encuéntralos"},
-        {"role": "assistant", "content": "x + (x+1) + (x+2) = 78 → 3x+3=78 → 3x=75 → x=25. Números: 25, 26, 27"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve x⁵ - 3x³ + 2x = 0"},
-        {"role": "assistant", "content": "Factor común x(x⁴-3x²+2)=0 → x(x²-1)(x²-2)=0 → Soluciones: x=0, x=±1, x=±√2"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 2x² + 5x + 10 = 0"},
-        {"role": "assistant", "content": "Discriminante: 25-80 = -55 → Soluciones complejas: x = [-5 ± i√55]/4. Ecuación cuadrática sin raíces reales"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve x + √(x) - 6 = 0"},
-        {"role": "assistant", "content": "Sustituir y=√x: y² + y -6=0 → y=2 → x=4; y=-3 (descartado). Solución real x=4"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve √(x + √x) = 2"},
-        {"role": "assistant", "content": "Cuadrar: x + √x =4 → √x=4-x → cuadrar: x=16-8x+x² → x²-9x+16=0 → x=(9±√17)/2. Verificar soluciones válidas"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve log₂(x²) - log₂(x+2) = 3"},
-        {"role": "assistant", "content": "Propiedades: log₂[x²/(x+2)] =3 → x²/(x+2)=8 → x²-8x-16=0 → x=4±4√2. Verificar dominio x>0 y x≠-2"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "¿Qué es un intervalo cerrado en la recta real?"},
-        {"role": "assistant", "content": "Es un conjunto que incluye todos los números entre dos extremos a y b, incluyendo estos. Notación: [a,b]. Ejemplo: [2,5] = {x ∈ ℝ | 2 ≤ x ≤ 5}"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Representa (-∞, 3) ∪ [5, 8] en notación de intervalos"},
-        {"role": "assistant", "content": "(-∞, 3) ∪ [5,8]. Son todos los números menores a 3 o mayores/iguales a 5 y menores/iguales a 8"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Calcula |π - 4|"},
-        {"role": "assistant", "content": "Como π ≈ 3.14 < 4 → |π - 4| = 4 - π ≈ 0.858. El módulo siempre da resultado no negativo"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve |2x - 5| = 7"},
-        {"role": "assistant", "content": "Caso 1: 2x-5=7 → 2x=12 → x=6. Caso 2: 2x-5=-7 → 2x=-2 → x=-1. Soluciones: x=6 y x=-1"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Expresa como intervalo: {x | -1 < x ≤ 3 o x > 5}"},
-        {"role": "assistant", "content": "(-1, 3] ∪ (5, ∞). Unión de dos intervalos disjuntos"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve |x + 3| < 4"},
-        {"role": "assistant", "content": "-4 < x+3 < 4 → -7 < x < 1. Solución: (-7, 1). Desigualdad de módulo tipo 'menor que'"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "¿Qué es el entorno reducido de centro 2 y radio 0.5?"},
-        {"role": "assistant", "content": "(2 - 0.5, 2 + 0.5) excluyendo 2 → (1.5, 2) ∪ (2, 2.5). Notación: (1.5, 2.5) - {2}"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 2 ≤ |x - 1| < 5"},
-        {"role": "assistant", "content": "Dividir en: 2 ≤ |x-1| y |x-1| <5 → Solución: [-4, -1] ∪ [3,6). Intervalo compuesto"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Halla A ∩ B si A = [-2,4) y B = (1,7]"},
-        {"role": "assistant", "content": "Intersección: (1,4). Números comunes a ambos intervalos"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve |3x + 2| ≥ 5"},
-        {"role": "assistant", "content": "3x+2 ≥5 → x≥1 o 3x+2 ≤-5 → x≤-7/3. Solución: (-∞, -7/3] ∪ [1, ∞)"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Grafica el intervalo {x | x < 0 o 2 ≤ x ≤ 5}"},
-        {"role": "assistant", "content": "←------)0 [2────5]──→. Representación en recta: (-∞,0) ∪ [2,5]"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve | |x - 2| - 3 | = 1"},
-        {"role": "assistant", "content": "Caso 1: |x-2| -3 =1 → |x-2|=4 → x=6 o x=-2. Caso 2: |x-2| -3=-1 → |x-2|=2 → x=4 o x=0. Soluciones: -2,0,4,6"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "¿Cómo se expresa ℝ como intervalo?"},
-        {"role": "assistant", "content": "(-∞, ∞). Abarca todos los números reales sin restricciones"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Resuelve 1/|x - 1| > 2"},
-        {"role": "assistant", "content": "1/|x-1|>2 → |x-1|<1/2 → -1/2 <x-1<1/2 → 1/2 <x<3/2. Dominio: x ≠1 (ya incluido en solución)"}
-      ]
-    },
-    {
-      "messages": [
-        {"role": "user", "content": "Demuestra que |a + b| ≤ |a| + |b|"},
-        {"role": "assistant", "content": "Desigualdad triangular: Usando cuadrados: (|a+b|)² ≤ (|a|+|b|)² → a²+2ab+b² ≤a²+2|ab|+b² → Verdadero pues ab ≤|ab|"}
-      ]
-    }
-  ]
+  {
+    "role": "system",
+    "content": "Eres un asistente matemático especializado. Tu objetivo es explicar conceptos matemáticos de manera clara, precisa y didáctica. Ayudas a los estudiantes a entender temas de conjuntos numéricos, ecuaciones e inecuaciones con explicaciones paso a paso."
+  },
+  
+  {
+    "role": "user",
+    "content": "¿Cuáles son los principales conjuntos numéricos y cómo se relacionan entre sí?"
+  },
+  {
+    "role": "assistant",
+    "content": "Los principales conjuntos numéricos, en orden de inclusión, son:\n\n1. **Números Naturales (ℕ)**: {1, 2, 3, 4, ...}\n   Utilizados para contar. En algunos contextos incluyen el 0 (ℕ₀).\n\n2. **Números Enteros (ℤ)**: {..., -3, -2, -1, 0, 1, 2, 3, ...}\n   Incluyen los naturales, el cero y los negativos.\n\n3. **Números Racionales (ℚ)**: {p/q donde p, q ∈ ℤ y q ≠ 0}\n   Son fracciones o cocientes de enteros. Ejemplos: 1/2, 3/4, -5/3.\n\n4. **Números Irracionales (𝕀)**: Números reales que no pueden expresarse como fracciones.\n   Ejemplos: √2, π, e.\n\n5. **Números Reales (ℝ)**: La unión de racionales e irracionales. Representan todos los puntos en la recta numérica.\n\nLa relación de inclusión entre estos conjuntos es:\nℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ\n\nEsto significa que cada conjunto está contenido en el siguiente. Por ejemplo, todo número natural es también un número entero, todo número entero es también un número racional, etc.\n\nLos números racionales (ℚ) e irracionales (𝕀) son disjuntos (no tienen elementos en común), pero juntos forman los números reales: ℚ ∪ 𝕀 = ℝ."
+  },
+  
+  {
+    "role": "user",
+    "content": "¿Cuáles son las características de los números racionales?"
+  },
+  {
+    "role": "assistant",
+    "content": "Los números racionales (simbolizados por ℚ) tienen las siguientes características fundamentales:\n\n1. **Definición**: Un número racional es cualquier número que puede expresarse como una fracción p/q, donde p y q son números enteros y q ≠ 0.\n\n2. **Representación decimal**: Todo número racional tiene una representación decimal que es:\n   - Finita (termina): 1/4 = 0.25, 3/5 = 0.6\n   - Periódica (un patrón se repite indefinidamente): 1/3 = 0.333..., 1/7 = 0.142857142857...\n\n3. **Propiedades algebraicas**:\n   - Cerrado bajo suma, resta, multiplicación y división (excepto por cero)\n   - Conmutatividad: a + b = b + a, a × b = b × a\n   - Asociatividad: (a + b) + c = a + (b + c), (a × b) × c = a × (b × c)\n   - Elemento neutro: a + 0 = a, a × 1 = a\n   - Elemento inverso: a + (-a) = 0, a × (1/a) = 1 (para a ≠ 0)\n\n4. **Densidad**: Entre dos números racionales cualesquiera, siempre existe otro número racional.\n   - Por ejemplo, entre 1/3 y 2/3 está 1/2, y entre 1/3 y 1/2 está 5/12, etc.\n\n5. **Ordenación**: Los números racionales están totalmente ordenados.\n   - Para comparar dos fracciones, podemos reducirlas a un denominador común.\n\n6. **Ejemplos comunes**: 1/2, 3/4, -5/3, 2 (= 2/1), 0 (= 0/1), -1 (= -1/1).\n\n7. **Contraste con irracionales**: A diferencia de los números irracionales, los racionales pueden expresarse exactamente como fracción."
+  },
+  
+  {
+    "role": "user",
+    "content": "¿Qué son los números irracionales y qué los diferencia de los racionales?"
+  },
+  {
+    "role": "assistant",
+    "content": "Los números irracionales son una parte fundamental de los números reales que no pueden expresarse como una fracción de números enteros. Aquí están sus características principales y diferencias con los racionales:\n\n**Características de los números irracionales**:\n\n1. **Definición**: Son números reales que NO pueden escribirse como p/q donde p y q son enteros con q ≠ 0.\n\n2. **Representación decimal**: Tienen una expansión decimal infinita y no periódica.\n   - No termina (infinita)\n   - No tiene un patrón que se repita (no periódica)\n\n3. **Ejemplos importantes**:\n   - √2 ≈ 1.414213562... (raíz cuadrada de 2)\n   - π ≈ 3.141592653... (pi, relación entre circunferencia y diámetro)\n   - e ≈ 2.718281828... (número de Euler)\n   - φ ≈ 1.618033988... (número áureo)\n\n**Diferencias clave con los números racionales**:\n\n| Característica | Números Racionales (ℚ) | Números Irracionales (𝕀) |\n|----------------|------------------------|---------------------------|\n| Expresión como fracción | Pueden expresarse como p/q | No pueden expresarse como fracción |\n| Representación decimal | Finita o infinita periódica | Infinita no periódica |\n| Ejemplos | 1/2, 3/4, 2, -5 | √2, π, e, φ |\n| Densidad | Densos pero con \"huecos\" | Llenan los \"huecos\" dejados por los racionales |\n\nJuntos, los números racionales (ℚ) e irracionales (𝕀) forman el conjunto de los números reales (ℝ): ℝ = ℚ ∪ 𝕀.\n\nLa existencia de números irracionales fue un descubrimiento importante en la historia de las matemáticas, comenzando con el descubrimiento por los pitagóricos de que √2 no podía expresarse como una fracción."
+  },
+  
+  {
+    "role": "user",
+    "content": "¿Qué es una ecuación lineal y cómo se resuelve?"
+  },
+  {
+    "role": "assistant",
+    "content": "Una ecuación lineal es una ecuación algebraica en la que la variable aparece únicamente elevada a la primera potencia. La forma general es:\n\nax + b = 0\n\nDonde a y b son constantes reales y a ≠ 0.\n\n**Método para resolver ecuaciones lineales**:\n\n1. **Simplificar** ambos lados de la ecuación:\n   - Eliminar paréntesis usando la propiedad distributiva\n   - Combinar términos semejantes\n\n2. **Aislar los términos con la variable** en un lado:\n   - Mover todos los términos con x al lado izquierdo\n   - Mover todos los términos constantes al lado derecho\n   - Usar operaciones inversas: sumar/restar en ambos lados\n\n3. **Despejar la variable**:\n   - Dividir ambos lados por el coeficiente de x\n\n4. **Verificar la solución** sustituyendo en la ecuación original\n\n**Ejemplo: Resolver 3x + 5 = 2x - 7**\n\n1. Agrupar términos con la variable en un lado:\n   3x - 2x = -7 - 5\n   x = -12\n\n2. Verificar: \n   3(-12) + 5 = 2(-12) - 7\n   -36 + 5 = -24 - 7\n   -31 = -31 ✓\n\n**Propiedades importantes**:\n\n- Sumar o restar la misma cantidad a ambos lados mantiene la igualdad\n- Multiplicar o dividir ambos lados por el mismo número no nulo mantiene la igualdad\n\n**Casos especiales**:\n\n1. Si obtenemos una identidad (como 0 = 0), la ecuación tiene infinitas soluciones\n2. Si obtenemos una contradicción (como 0 = 5), la ecuación no tiene solución"
+  },
+  
+  {
+    "role": "user",
+    "content": "Resuelve la ecuación 4x - 2(x+3) = 5x + 1"
+  },
+  {
+    "role": "assistant",
+    "content": "Voy a resolver la ecuación 4x - 2(x+3) = 5x + 1 paso a paso:\n\n1) Primero, aplico la propiedad distributiva en el término 2(x+3):\n   4x - 2(x+3) = 5x + 1\n   4x - 2x - 6 = 5x + 1\n   2x - 6 = 5x + 1\n\n2) Ahora, agrupo los términos con la variable x en un lado y los términos constantes en el otro:\n   2x - 5x = 1 + 6\n   -3x = 7\n\n3) Divido ambos lados entre -3 para despejar x:\n   -3x/-3 = 7/-3\n   x = -7/3\n\n4) Verifico la solución sustituyendo x = -7/3 en la ecuación original:\n   4(-7/3) - 2((-7/3)+3) = 5(-7/3) + 1\n   \n   4(-7/3) - 2((-7/3)+9/3) = 5(-7/3) + 1\n   4(-7/3) - 2(2/3) = 5(-7/3) + 1\n   -28/3 - 4/3 = -35/3 + 1\n   -32/3 = -35/3 + 3/3\n   -32/3 = -32/3 ✓\n\nPor lo tanto, la solución de la ecuación 4x - 2(x+3) = 5x + 1 es x = -7/3.\n\nExpresado como número decimal: x = -2.33333...\n\nEsta solución pertenece al conjunto de los números racionales (ℚ) y, por lo tanto, también al conjunto de los números reales (ℝ)."
+  },
+  
+  {
+    "role": "user",
+    "content": "Resuelve la ecuación (x+2)/3 = (2x-1)/5"
+  },
+  {
+    "role": "assistant",
+    "content": "Voy a resolver la ecuación (x+2)/3 = (2x-1)/5 paso a paso:\n\n1) Primero, eliminaré las fracciones multiplicando ambos lados por el mínimo común múltiplo (MCM) de los denominadores.\n   El MCM de 3 y 5 es 15, así que multiplico ambos lados por 15:\n   \n   15 × (x+2)/3 = 15 × (2x-1)/5\n   5(x+2) = 3(2x-1)\n\n2) Aplico la propiedad distributiva en ambos lados:\n   5x + 10 = 6x - 3\n\n3) Agrupo los términos con la variable x en un lado y los términos constantes en el otro:\n   5x - 6x = -3 - 10\n   -x = -13\n\n4) Multiplico ambos lados por -1 para despejar x:\n   x = 13\n\n5) Verifico la solución sustituyendo x = 13 en la ecuación original:\n   (13+2)/3 = (2(13)-1)/5\n   15/3 = 25/5\n   5 = 5 ✓\n\nPor lo tanto, la solución de la ecuación (x+2)/3 = (2x-1)/5 es x = 13.\n\nEsta solución pertenece a los conjuntos de números naturales (ℕ), enteros (ℤ), racionales (ℚ) y reales (ℝ)."
+  },
+  
+  {
+    "role": "user",
+    "content": "¿Qué es una inecuación lineal?"
+  },
+  {
+    "role": "assistant",
+    "content": "Una inecuación lineal es una expresión matemática que establece una desigualdad entre dos expresiones algebraicas donde la variable aparece únicamente elevada a la primera potencia.\n\n**Características principales**:\n\n1. **Forma general**: Las inecuaciones lineales con una variable tienen las siguientes formas:\n   - ax + b < 0\n   - ax + b > 0\n   - ax + b ≤ 0\n   - ax + b ≥ 0\n\n   donde a y b son constantes reales y a ≠ 0.\n\n2. **Símbolos de desigualdad**:\n   - < (menor que)\n   - > (mayor que)\n   - ≤ (menor o igual que)\n   - ≥ (mayor o igual que)\n\n3. **Solución**:\n   - La solución no es un valor único, sino un conjunto de valores\n   - Generalmente se expresa como un intervalo o unión de intervalos\n   - Se representa en la recta numérica\n\n4. **Tipos de intervalos**:\n   - (a,b): intervalo abierto, no incluye los extremos\n   - [a,b]: intervalo cerrado, incluye los extremos\n   - (a,b]: intervalo semiabierto, incluye solo b\n   - [a,b): intervalo semiabierto, incluye solo a\n   - (a,∞): todos los valores mayores que a\n   - [a,∞): todos los valores mayores o iguales que a\n   - (-∞,b): todos los valores menores que b\n   - (-∞,b]: todos los valores menores o iguales que b\n\n**Propiedades clave para resolver inecuaciones**:\n\n1. Se pueden sumar o restar las mismas cantidades a ambos lados sin cambiar el sentido de la desigualdad.\n2. Se puede multiplicar o dividir ambos lados por un número positivo sin cambiar el sentido de la desigualdad.\n3. Al multiplicar o dividir ambos lados por un número negativo, se invierte el sentido de la desigualdad (< se convierte en >, ≤ se convierte en ≥, y viceversa)."
+  },
+  
+  {
+    "role": "user",
+    "content": "¿Cómo se resuelve una inecuación lineal?"
+  },
+  {
+    "role": "assistant",
+    "content": "# Proceso para resolver inecuaciones lineales\n\nLas inecuaciones lineales se resuelven de manera similar a las ecuaciones lineales, pero con algunas consideraciones especiales para las desigualdades.\n\n## Pasos para resolver una inecuación lineal\n\n1. **Simplificar la inecuación**\n   - Eliminar paréntesis aplicando la propiedad distributiva\n   - Combinar términos semejantes en cada lado\n\n2. **Agrupar términos**\n   - Mover todos los términos con la variable a un lado\n   - Mover todos los términos constantes al otro lado\n\n3. **Despejar la variable**\n   - Si el coeficiente de la variable es positivo, la desigualdad mantiene su sentido\n   - Si el coeficiente de la variable es negativo, la desigualdad invierte su sentido (< cambia a >, ≤ cambia a ≥, y viceversa)\n\n4. **Expresar la solución**\n   - Como intervalo en la recta numérica\n   - Usando notación de intervalos\n\n## Propiedades fundamentales a recordar\n\n- Al sumar o restar la misma cantidad en ambos lados, la desigualdad mantiene su sentido\n- Al multiplicar o dividir ambos lados por un número positivo, la desigualdad mantiene su sentido\n- Al multiplicar o dividir ambos lados por un número negativo, la desigualdad invierte su sentido\n\n## Ejemplo práctico\n\nResolvamos 3x - 4 < 2x + 5:\n\n1. **Agrupar términos con la variable**\n   3x - 2x < 5 + 4\n   x < 9\n\n2. **La solución es x < 9**, lo que representa el intervalo (-∞, 9) en la recta numérica.\n\n## Casos especiales\n\n1. **Inecuaciones siempre verdaderas**: Si llegamos a una expresión siempre verdadera como 0 < 5, la solución es todos los números reales: x ∈ ℝ\n\n2. **Inecuaciones sin solución**: Si llegamos a una expresión imposible como 0 > 5, la solución es el conjunto vacío: x ∈ ∅"
+  },
+  
+  {
+    "role": "user",
+    "content": "Resuelve la inecuación 2(x-1) + 3 < 5x - 4"
+  },
+  {
+    "role": "assistant",
+    "content": "Voy a resolver la inecuación 2(x-1) + 3 < 5x - 4 paso a paso:\n\n1) Primero, aplico la propiedad distributiva en el lado izquierdo:\n   2(x-1) + 3 < 5x - 4\n   2x - 2 + 3 < 5x - 4\n   2x + 1 < 5x - 4\n\n2) Agrupo los términos con la variable x en el lado izquierdo y los términos constantes en el lado derecho.\n   Resto 5x en ambos lados:\n   2x + 1 - 5x < 5x - 4 - 5x\n   -3x + 1 < -4\n\n3) Resto 1 en ambos lados:\n   -3x + 1 - 1 < -4 - 1\n   -3x < -5\n\n4) Divido ambos lados entre -3. Como estoy dividiendo por un número negativo, debo invertir el sentido de la desigualdad:\n   -3x/-3 > -5/-3\n   x > 5/3\n\n5) Por lo tanto, la solución es el conjunto de todos los números reales mayores que 5/3.\n\n6) Expresado como intervalo: x ∈ (5/3, ∞)\n\n7) En la recta numérica, corresponde a todos los puntos a la derecha de 5/3 (aproximadamente 1.67), sin incluir el punto 5/3.\n\nLa solución de la inecuación 2(x-1) + 3 < 5x - 4 es x > 5/3 o x ∈ (5/3, ∞)."
+  },
+  
+  {
+    "role": "user",
+    "content": "Resuelve la inecuación -3x + 5 ≤ 2x - 10"
+  },
+  {
+    "role": "assistant",
+    "content": "Voy a resolver la inecuación -3x + 5 ≤ 2x - 10 paso a paso:\n\n1) Primero, agruparé los términos con la variable x en el lado izquierdo y los términos constantes en el lado derecho.\n   Resto 2x de ambos lados:\n   -3x + 5 - 2x ≤ 2x - 10 - 2x\n   -5x + 5 ≤ -10\n\n2) Ahora, resto 5 de ambos lados:\n   -5x + 5 - 5 ≤ -10 - 5\n   -5x ≤ -15\n\n3) Divido ambos lados entre -5. Como estoy dividiendo por un número negativo, debo invertir el sentido de la desigualdad:\n   -5x/-5 ≥ -15/-5\n   x ≥ 3\n\n4) Por lo tanto, la solución es el conjunto de todos los números reales mayores o iguales a 3.\n\n5) Expresado como intervalo: x ∈ [3, ∞)\n\n6) En la recta numérica, corresponde a todos los puntos a la derecha de 3, incluyendo el punto 3.\n\nLa solución de la inecuación -3x + 5 ≤ 2x - 10 es x ≥ 3 o x ∈ [3, ∞).\n\nEsta solución indica que cualquier valor de x mayor o igual a 3 satisface la inecuación original."
+  },
+  
+  {
+    "role": "user",
+    "content": "Resuelve la inecuación (x+5)/4 > (x-1)/2"
+  },
+  {
+    "role": "user",
+    "content": "¿Qué significa que un número sea irracional? Dame ejemplos."
+  },
+  {
+    "role": "assistant",
+    "content": "# Números Irracionales: Definición y Ejemplos\n\n## Definición\n\nUn número irracional es un número real que **no puede expresarse como una fracción** de dos números enteros. En otras palabras, no puede escribirse en la forma p/q donde p y q son enteros y q ≠ 0.\n\n## Características principales\n\n1. **Representación decimal infinita no periódica**:\n   - Su expansión decimal continúa indefinidamente\n   - No tiene un patrón que se repita de manera periódica\n\n2. **No expresable como fracción**:\n   - No puede simplificarse a una razón de dos enteros\n   - No es posible representarlo exactamente como p/q\n\n3. **Completa la recta numérica**:\n   - Llena los \"huecos\" que dejan los números racionales\n   - Hace que la recta numérica sea continua\n\n## Ejemplos famosos de números irracionales\n\n1. **Raíces cuadradas de números no cuadrados perfectos**:\n   - √2 ≈ 1.4142135623...\n   - √3 ≈ 1.7320508075...\n   - √5 ≈ 2.2360679774...\n\n2. **Constantes matemáticas fundamentales**:\n   - π (pi) ≈ 3.1415926535...\n     * Relación entre la circunferencia y el diámetro de un círculo\n   - e (número de Euler) ≈ 2.7182818284...\n     * Base de los logaritmos naturales\n   - φ (número áureo) ≈ 1.6180339887...\n     * Proporción que aparece en arte, arquitectura y naturaleza\n\n3. **Logaritmos de ciertos números**:\n   - log₂(3) ≈ 1.5849625007...\n   - log₁₀(2) ≈ 0.3010299956...\n\n## Cómo demostrar que un número es irracional\n\nLa forma clásica de demostrar que un número es irracional es mediante una prueba por contradicción:\n\n- Suponer que el número puede escribirse como una fracción en su forma más simple\n- Llegar a una contradicción lógica\n- Concluir que el número no puede ser racional\n\nPor ejemplo, √2 se demuestra irracional probando que si √2 = p/q, entonces tanto p como q deben ser pares, lo que contradice que la fracción esté en su forma más simple.\n\n## Importancia en matemáticas\n\nLos números irracionales son esenciales para completar el sistema de números reales y son fundamentales en geometría, análisis matemático y muchas aplicaciones prácticas de las matemáticas."
+  },
+  
+  {
+    "role": "user",
+    "content": "Resuelve la ecuación 3(x-2) = 2(x+1)"
+  },
+  {
+    "role": "assistant",
+    "content": "Voy a resolver la ecuación 3(x-2) = 2(x+1) paso a paso:\n\n1) Primero, aplicaré la propiedad distributiva en ambos lados de la ecuación:\n   3(x-2) = 2(x+1)\n   3x - 6 = 2x + 2\n\n2) Ahora, agruparé los términos con la variable x en un lado y los términos constantes en el otro.\n   Resto 2x en ambos lados:\n   3x - 6 - 2x = 2x + 2 - 2x\n   x - 6 = 2\n\n3) Sumo 6 a ambos lados para despejar x:\n   x - 6 + 6 = 2 + 6\n   x = 8\n\n4) Verifico la solución sustituyendo x = 8 en la ecuación original:\n   3(8-2) = 2(8+1)\n   3(6) = 2(9)\n   18 = 18 ✓\n\nPor lo tanto, la solución de la ecuación 3(x-2) = 2(x+1) es x = 8.\n\nEsta solución pertenece a los conjuntos de números naturales (ℕ), enteros (ℤ), racionales (ℚ) y reales (ℝ)."
+  },
+  
+  {
+    "role": "user",
+    "content": "Resuelve la inecuación 4x - 7 ≥ 3x + 5"
+  },
+  {
+    "role": "assistant",
+    "content": "Voy a resolver la inecuación 4x - 7 ≥ 3x + 5 paso a paso:\n\n1) Primero, agruparé los términos con la variable x en un lado y los términos constantes en el otro.\n   Resto 3x en ambos lados:\n   4x - 7 - 3x ≥ 3x + 5 - 3x\n   x - 7 ≥ 5\n\n2) Sumo 7 a ambos lados para despejar x:\n   x - 7 + 7 ≥ 5 + 7\n   x ≥ 12\n\n3) Por lo tanto, la solución es el conjunto de todos los números reales mayores o iguales a 12.\n\n4) Expresado como intervalo: x ∈ [12, ∞)\n\n5) En la recta numérica, corresponde a todos los puntos a la derecha de 12, incluyendo el punto 12.\n\nLa solución de la inecuación 4x - 7 ≥ 3x + 5 es x ≥ 12 o x ∈ [12, ∞).\n\nEsta solución indica que cualquier valor de x que sea mayor o igual a 12 satisface la inecuación original."
+  },
+  
+  {
+    "role": "user",
+    "content": "¿Cuál es la diferencia entre ecuación e inecuación?"
+  },
+  {
+    "role": "assistant",
+    "content": "# Diferencias entre Ecuaciones e Inecuaciones\n\n| Característica | Ecuaciones | Inecuaciones |\n|---------------|------------|-------------|\n| **Símbolo utilizado** | Igualdad (=) | Desigualdad (<, >, ≤, ≥) |\n| **Tipo de solución** | Valores específicos | Intervalos o conjuntos de valores |\n| **Representación gráfica** | Puntos en la recta numérica | Intervalos (segmentos o semirrectas) |\n\n## Ecuaciones\n\n**Definición**: Una ecuación establece la igualdad entre dos expresiones algebraicas.\n\n**Características**:\n1. Busca valores específicos que hagan verdadera la igualdad\n2. Ejemplo: 2x + 3 = 7 tiene como única solución x = 2\n3. Al resolver, se obtienen valores puntuales\n\n**Propiedades para resolver**:\n- Sumando/restando el mismo valor a ambos lados, la igualdad se mantiene\n- Multiplicando/dividiendo ambos lados por el mismo valor no nulo, la igualdad se mantiene\n\n## Inecuaciones\n\n**Definición**: Una inecuación establece una relación de orden (mayor, menor, mayor o igual, menor o igual) entre dos expresiones algebraicas.\n\n**Características**:\n1. Busca intervalos de valores que satisfagan la desigualdad\n2. Ejemplo: 2x + 3 < 7 tiene como solución x < 2, o el intervalo (-∞, 2)\n3. Al resolver, se obtienen conjuntos o intervalos de valores\n\n**Propiedades adicionales para resolver**:\n- Al multiplicar o dividir ambos lados por un número negativo, se invierte el sentido de la desigualdad\n\n## Ejemplos comparativos\n\n**Ecuación**: 3x - 6 = 0\n- Solución: x = 2 (un valor único)\n- Representación: el punto 2 en la recta numérica\n\n**Inecuación**: 3x - 6 > 0\n- Solución: x > 2 o x ∈ (2, ∞)\n- Representación: la semirrecta a la derecha del punto 2\n\n## Aplicaciones\n\n**Ecuaciones**:\n- Encontrar valores exactos\n- Determinar puntos de intersección\n- Resolver problemas con una única respuesta\n\n**Inecuaciones**:\n- Establecer límites o restricciones\n- Definir regiones de factibilidad\n- Problemas de optimización\n- Análisis de intervalos donde una función cumple ciertas condiciones"
+  }
+]
