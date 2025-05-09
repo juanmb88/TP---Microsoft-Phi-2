@@ -10,6 +10,55 @@ Entrenamos un modelo de inteligencia artificial (Phi-2) para que funcione como t
 * **Tiempo que tardó:** 32.5 horas (1 día, 8 horas y 33 minutos)
 * **Cantidad de ciclos completos:** 250 épocas
 
+
+# 🔄 ¿Qué son las épocas en el entrenamiento de IA?
+
+## Concepto básico
+
+Una **época** en el entrenamiento de inteligencia artificial es un ciclo completo en el que el modelo procesa **todo** el conjunto de datos de entrenamiento una vez. Es como si el modelo "leyera" todo el libro de datos disponible de principio a fin.
+
+## 📚 Analogía para entenderlo mejor
+
+Imagina que estás estudiando para un examen importante con un libro de texto:
+
+- **Una época** = Leer el libro completo una vez
+- **Múltiples épocas** = Releer el mismo libro varias veces para entenderlo mejor
+
+Cada vez que relees el libro (cada época), comprendes mejor el material, haces conexiones nuevas y recuerdas más detalles.
+
+## 🧠 ¿Por qué se entrena en épocas?
+
+### 1. Aprendizaje gradual
+
+Los modelos de IA no suelen aprender todo en una sola pasada. Necesitan ver los datos múltiples veces para:
+- Detectar patrones sutiles
+- Reforzar lo aprendido
+- Ajustar sus parámetros internos
+
+### 2. Limitaciones prácticas
+
+- La **memoria del ordenador** es limitada, no siempre puede procesar todos los datos a la vez
+- Dividir en épocas permite procesar conjuntos de datos enormes
+
+### 3. Seguimiento del progreso
+
+- Las épocas proporcionan puntos de control naturales para evaluar cómo progresa el entrenamiento
+- Al final de cada época, podemos medir el rendimiento y decidir si continuar
+
+## 📊 ¿Cuántas épocas son necesarias?
+
+Este es un número que varía según:
+
+- **Complejidad del modelo**: Modelos más complejos pueden requerir más épocas
+- **Cantidad de datos**: Con más datos, a veces se necesitan menos épocas
+- **Tarea a aprender**: Tareas difíciles requieren más épocas
+- **Calidad de los datos**: Datos de alta calidad pueden requerir menos épocas
+
+En general, observamos que:
+
+1. **Épocas iniciales**: Gran mejora (el modelo aprende conceptos básicos)
+2. **Épocas intermedias**: Mejora moderada (el modelo refina lo aprendido)
+3. **Épocas finales**: Mejora mínima o nula (punto de saturación)
 ## 🧠 ¿Qué pasó durante el entrenamiento?
 
 Observamos que el entrenamiento se dividió naturalmente en tres etapas:
