@@ -155,4 +155,4 @@ Observamos que el entrenamiento se dividió naturalmente en tres etapas:
 
 ---
 
-*Este análisis está diseñado para ser accesible tanto para principiantes como para personas con experiencia en aprendizaje automático
+*Este análisis está diseñado para ser accesible tanto para principiantes como para personas con experiencia ademas cabe aclarar que me apoye en IA's para trabajar el documento 
