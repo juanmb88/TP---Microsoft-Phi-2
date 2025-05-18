@@ -110,6 +110,7 @@ Observamos que el entrenamiento se dividió naturalmente en tres etapas:
 | **LoRA** | Técnica para ajustar modelos grandes usando menos recursos | Permite entrenar modelos grandes en GPU modestas |
 | **Fine-tuning** | Proceso de adaptar un modelo pre-entrenado a una tarea específica | Lo que estamos haciendo con Phi-2 |
 | **Parámetros** | Valores ajustables dentro del modelo | Los "conocimientos" del modelo (1.5B = 1,500 millones) |
+| **overfitting** | Sobreentrenamiento del modelo,contemplar en argumentos para entrenar el modelo el parametro epocas.
 
 ## 📈 Los Números Importantes
 
@@ -151,8 +152,58 @@ Observamos que el entrenamiento se dividió naturalmente en tres etapas:
 * train_samples_per_second = 0.137
 * train_steps_per_second = 0.009
 
+
+📊 Explicación de las Métricas Finales
+1. epochs = 250.0
+
+Significado: Complete 250 ciclos completos de entrenamiento a través del dataset (archivo fine-tuning).
+Contexto: El no saber.....250 de valor para el parámetro de épocas es un número extremadamente alto para fine-tuning de Phi-2. Como se ve en el informe, después de 100 épocas apenas hubo mejora (solo 1% adicional).
+Problema potencial: Entrenamiento excesivo (overfitting) - el modelo memoriza ejemplos en lugar de generalizar.
+
+2. total_flos = 100852232GF
+
+Significado: FLOPS (Floating Point Operations) - El número total de operaciones matemáticas realizadas.
+Contexto: GF significa "Giga FLOPS" (miles de millones de operaciones).
+Implicación: El entrenamiento fue computacionalmente muy intensivo, con más de 100 mil millones de operaciones.
+
+3. train_loss = 0.2402
+
+Significado: La función de pérdida - qué tan equivocado está el modelo sobre los datos de entrenamiento.
+Contexto: Valor bajo indica que el modelo se ajusta bien a los datos de entrenamiento.
+Problema potencial: Una pérdida muy baja (0.057 mencionada antesm pero a modo ejemplo vs 0.2402 mencionada aquí) junto con un número alto de épocas indica casi con certeza overfitting.
+
+4. train_samples_per_second = 0.137
+
+Significado: Cuántos ejemplos/muestras procesa el modelo cada segundo.
+Contexto: Este valor es bastante bajo - solo 0.137 muestras por segundo.
+Implicación:  GPU de 1050 Ti es muy limitada, por lo que el entrenamiento fue lento.
+
+5. train_steps_per_second = 0.009
+
+Significado: Cantidad de pasos de optimización por segundo.
+Contexto: Muy bajo - menos de 0.01 pasos por segundo.
+Implicación: Explicación del largo tiempo total de entrenamiento (32.5 horas).
+
+🔍 Análisis del Problema Actual
+Estas métricas revelan exactamente por qué el modelo falló:
+
+Sobreentrenamiento (250 épocas) - Cuando un modelo se entrena demasiado tiempo, empieza a memorizar el dataset en lugar de generalizar.
+Pérdida muy baja (0.057 o 0.2402) - Señal clásica de overfitting. El modelo reproduce exactamente los ejemplos de entrenamiento, pero no puede generalizar a nuevos casos.
+Tiempo excesivo (32.5 horas) - Tiempo excesivo para un fine-tuning que podría haberse completado en 2-4 horas.
+
+🚀 Recomendación 
+Para solucionar esto:
+
+Reducir drásticamente las épocas - Usa 3-5 épocas como máximo
+dataset mas básico.
+Aumenta la regularización (LORA_DROPOUT = 0.2)
+Reduce el learning rate para evitar memorización (1e-6)
+
+
+
 **Ubicación del modelo guardado:** `models/phi2-matematicas-tutor`
 
 ---
 
-*Este análisis está diseñado para ser accesible tanto para principiantes como para personas con experiencia ademas cabe aclarar que me apoye en IA's para trabajar el documento 
+*Este análisis está diseñado para ser accesible tanto para principiantes como para personas con experiencia ademas cabe aclarar que me apoye en IA's para trabajar el documento.
+Se aplicaran cambios y se presentara nuevo entrenamiento a futuro.
