@@ -35,6 +35,14 @@ from utils import (
 )
 import config
 
+
+
+
+
+
+
+
+
 def main():
     # Optimizaciones para GPU con memoria limitada
     optimize_model_for_gpu_with_4gb()
@@ -165,10 +173,11 @@ def main():
         per_device_train_batch_size=config.BATCH_SIZE,
         per_device_eval_batch_size=config.BATCH_SIZE,
         gradient_accumulation_steps=config.GRADIENT_ACCUMULATION_STEPS,
-        warmup_steps=config.WARMUP_STEPS,
-        max_steps=config.MAX_STEPS,
+        # warmup_steps=config.WARMUP_STEPS,
+        warmup_ratio=config.WARMUP_RATIO,
+        # max_radio=config.WARMUP_RATIO,
         save_steps=config.SAVE_STEPS,
-        logging_steps=config.LOGGING_STEPS,
+        logging_steps=25,
         save_total_limit=2,
         remove_unused_columns=False,
         push_to_hub=False,
@@ -180,6 +189,11 @@ def main():
         bf16=False,  # Phi-2 no soporta bien bf16
         gradient_checkpointing=True,  # Ahorrar memoria activando gradient checkpointing
         gradient_checkpointing_kwargs={"use_reentrant": False},
+        eval_strategy="steps",          
+        eval_steps=50,                        
+        load_best_model_at_end=True,          
+        metric_for_best_model="eval_loss",    
+        greater_is_better=False, 
         seed=42,
         data_seed=42,
         logging_first_step=True,
