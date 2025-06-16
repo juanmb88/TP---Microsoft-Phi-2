@@ -101,22 +101,22 @@ def format_chat_to_instruction_response(messages):
         }
     return None
 
-def format_conversation(messages, tokenizer=None):
-    """Formatea una conversación para Phi-2"""
-    formatted_text = ""
+def format_conversation(messages, tokenizer=None):    
+    user_content = ""
+    assistant_content = ""
     
+    # Extraer contenido correctamente
     for msg in messages:
         if msg["role"] == "user":
-            formatted_text += f"<|user|>{msg['content']}"
+            user_content = msg["content"]
         elif msg["role"] == "assistant":
-            formatted_text += f"<|assistant|>{msg['content']}"
-        elif msg["role"] == "system":
-            formatted_text += f"<|system|>{msg['content']}"
+            assistant_content = msg["content"]
     
-    # Añadir token de fin si es necesario
-    if hasattr(tokenizer, "eos_token") and tokenizer.eos_token:
-        if not formatted_text.endswith(tokenizer.eos_token):
-            formatted_text += tokenizer.eos_token
+    # Formato simple y limpio
+    formatted_text = f"Pregunta: {user_content}\nRespuesta: {assistant_content}"
+    
+    if tokenizer and hasattr(tokenizer, "eos_token") and tokenizer.eos_token:
+        formatted_text += tokenizer.eos_token
     
     return formatted_text
 

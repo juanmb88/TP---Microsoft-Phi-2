@@ -112,7 +112,7 @@ def load_model(model_path=None):
         return None, None
 
 def generate_response(model, tokenizer, user_message, conversation_history=None, system_prompt=None):
-    """Generar respuesta para una pregunta matemática"""
+    """Generar respuesta para una pregunta matemática - VERSIÓN CORREGIDA"""
     if model is None or tokenizer is None:
         return "Error: Modelo no cargado correctamente", conversation_history
     
@@ -127,40 +127,71 @@ def generate_response(model, tokenizer, user_message, conversation_history=None,
     conversation_history.append({"role": "user", "content": user_message})
     
     try:
-        # Formatear la conversación para Phi-2
+        # 🔧 CORRECCIÓN 1: Formato limpio sin tokens especiales problemáticos
         input_text = ""
-        for msg in conversation_history:
+        
+        # Solo procesar los últimos 2-3 intercambios para evitar degradación
+        recent_history = conversation_history[-6:] if len(conversation_history) > 6 else conversation_history
+        
+        for msg in recent_history:
             if msg["role"] == "system":
-                input_text += f"<|system|>{msg['content']}"
+                input_text += f"Sistema: {msg['content']}\n"
             elif msg["role"] == "user":
-                input_text += f"<|user|>{msg['content']}"
+                input_text += f"Pregunta: {msg['content']}\n"
             elif msg["role"] == "assistant":
-                input_text += f"<|assistant|>{msg['content']}"
+                input_text += f"Respuesta: {msg['content']}\n"
         
-        # Añadir token de assistant para la respuesta
-        input_text += "<|assistant|>"
+        # 🔧 CORRECCIÓN 2: Formato final limpio
+        # Si es la primera pregunta o no hay assistant previo
+        if not any(msg["role"] == "assistant" for msg in recent_history):
+            input_text += "Respuesta: "
+        else:
+            # Para preguntas siguientes, usar formato consistente
+            input_text = input_text.rstrip() + "\nRespuesta: "
         
-        # Tokenizar
-        inputs = tokenizer(input_text, return_tensors="pt").to(model.device)
+        # 🔧 CORRECCIÓN 3: Tokenizar con configuración segura
+        inputs = tokenizer(
+            input_text, 
+            return_tensors="pt",
+            max_length=128,          # Limitar contexto
+            truncation=True,
+            padding=False
+        ).to(model.device)
         
-        # Generar respuesta
+        # 🔧 CORRECCIÓN 4: Configuración de generación optimizada
         with torch.no_grad():
             outputs = model.generate(
                 **inputs,
-                max_new_tokens=512,
-                temperature=config.INFERENCE_TEMPERATURE if hasattr(config, 'INFERENCE_TEMPERATURE') else 0.3,
+                max_new_tokens=20,                    # Aumentar ligeramente para respuestas completas
+                min_new_tokens=1,                     # Asegurar al menos 1 token
+                temperature=0.3,                      # Muy determinista para matemáticas
                 do_sample=True,
-                top_p=config.TOP_P if hasattr(config, 'TOP_P') else 0.9,
-                repetition_penalty=config.REPETITION_PENALTY if hasattr(config, 'REPETITION_PENALTY') else 1.2,
+                top_p=0.9,                          # Más restrictivo
+                top_k=50,                            # Limitar vocabulario
+                repetition_penalty=1.1,              # Suave para evitar degradación
+                pad_token_id=tokenizer.eos_token_id,
+                eos_token_id=tokenizer.eos_token_id,
+                no_repeat_ngram_size=2               # Evitar repeticiones
             )
         
-        # Decodificar la respuesta
+        # 🔧 CORRECCIÓN 5: Extracción limpia de respuesta
         generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         
-        # Extraer la respuesta generada
-        # Para Phi-2, extraer solo la última parte después del último "<|assistant|>"
-        parts = generated_text.split("<|assistant|>")
-        response = parts[-1].strip()
+        # Extraer solo la nueva respuesta
+        if "Respuesta: " in generated_text:
+            # Dividir por "Respuesta: " y tomar la última parte
+            parts = generated_text.split("Respuesta: ")
+            response = parts[-1].strip()
+        else:
+            # Fallback: tomar todo después del input original
+            response = generated_text[len(input_text):].strip()
+        
+        # 🔧 CORRECCIÓN 6: Limpiar respuesta de tokens residuales
+        response = clean_response(response)
+        
+        # Validar que la respuesta no esté vacía
+        if not response or len(response.strip()) == 0:
+            response = "No pude generar una respuesta válida."
         
         # Añadir la respuesta a la conversación
         conversation_history.append({"role": "assistant", "content": response})
@@ -169,10 +200,46 @@ def generate_response(model, tokenizer, user_message, conversation_history=None,
     
     except Exception as e:
         error_msg = f"Error al generar respuesta: {str(e)}"
-        console.print(f"[bold red]{error_msg}[/bold red]")
-        console.print(f"Entrada: {input_text[:100]}...")
-        conversation_history.append({"role": "assistant", "content": error_msg})
-        return error_msg, conversation_history
+        print(f"Error: {error_msg}")
+        print(f"Input text: {input_text[:200]}...")
+        conversation_history.append({"role": "assistant", "content": "Error en la generación"})
+        return "Error en la generación", conversation_history
+    
+
+    
+
+def clean_response(response):
+    """Limpiar respuesta de tokens problemáticos"""
+    import re
+    
+    # 🧹 LIMPIEZA 1: Remover tokens especiales problemáticos
+    problematic_tokens = [
+        r'<\|user\|>.*',           # Todo después de <|user|>
+        r'<\|assistant\|>.*',      # Todo después de <|assistant|>
+        r'<\|system\|>.*',         # Todo después de <|system|>
+        r'<\|endofgeneration\|>.*', # Todo después de endofgeneration
+        r'<\|.*\|>',               # Cualquier token especial
+        r'""".*',                  # Comillas triples problemáticas
+    ]
+    
+    for pattern in problematic_tokens:
+        response = re.sub(pattern, '', response, flags=re.DOTALL)
+    
+    # 🧹 LIMPIEZA 2: Remover patrones específicos observados
+    response = re.sub(r'\d+\s*%\s*\d+\?\s*<\|.*', '', response)  # "54 % 37?<|ass"
+    response = re.sub(r'<\|.*', '', response)                     # Cualquier token incompleto
+    
+    # 🧹 LIMPIEZA 3: Limpiar espacios y caracteres raros
+    response = response.strip()
+    response = re.sub(r'\s+', ' ', response)  # Múltiples espacios a uno
+    response = re.sub(r'^\W+', '', response)  # Caracteres raros al inicio
+    
+    # 🧹 LIMPIEZA 4: Para respuestas matemáticas, mantener solo lo esencial
+    if re.match(r'^\d+\.?\d*\s*$', response.strip()):  # Si es solo un número
+        response = response.strip()
+    
+    return response
+
 
 def display_welcome():
     """Mostrar mensaje de bienvenida"""
@@ -294,6 +361,10 @@ def batch_evaluate(model, tokenizer, test_file=None):
             console.print(f"[green]Respuesta:[/green] {short_response}\n")
     
     console.print(f"[bold green]Evaluación completada. Resultados guardados en:[/bold green] {results_file}")
+
+
+
+
 
 def main():
     """Función principal"""

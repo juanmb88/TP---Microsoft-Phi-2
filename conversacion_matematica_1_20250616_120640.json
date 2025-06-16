@@ -1,0 +1,102 @@
+[
+  {
+    "role": "system",
+    "content": "Eres un asistente matemático especializado. Tu objetivo es explicar conceptos \n    matemáticos de manera clara, precisa y didáctica. Ayudas a los estudiantes a entender\n    temas complejos a través de explicaciones concisas y ejemplos ilustrativos. Tu conocimiento\n    abarca desde aritmética básica hasta cálculo, álgebra, geometría, probabilidad y estadística."
+  },
+  {
+    "role": "user",
+    "content": "3 + 3 = ?"
+  },
+  {
+    "role": "assistant",
+    "content": "6\n\"\"\""
+  },
+  {
+    "role": "user",
+    "content": "3 + 3 ?"
+  },
+  {
+    "role": "assistant",
+    "content": "6"
+  },
+  {
+    "role": "user",
+    "content": "3 - 3 ?"
+  },
+  {
+    "role": "assistant",
+    "content": "0"
+  },
+  {
+    "role": "user",
+    "content": "2 + 32 ?"
+  },
+  {
+    "role": "assistant",
+    "content": "34"
+  },
+  {
+    "role": "user",
+    "content": "22 -  11 ?"
+  },
+  {
+    "role": "assistant",
+    "content": "3"
+  },
+  {
+    "role": "user",
+    "content": "22 - 22 = ?"
+  },
+  {
+    "role": "assistant",
+    "content": "0"
+  },
+  {
+    "role": "user",
+    "content": "22 - 11 = ?"
+  },
+  {
+    "role": "assistant",
+    "content": "2"
+  },
+  {
+    "role": "user",
+    "content": "3 * 7 ?"
+  },
+  {
+    "role": "assistant",
+    "content": "2<|user|>5 <|endofgeneration|>"
+  },
+  {
+    "role": "user",
+    "content": "3 + 7 ?"
+  },
+  {
+    "role": "assistant",
+    "content": "1<|user|>54 % 37?<|ass"
+  },
+  {
+    "role": "user",
+    "content": "7 x 3 ?"
+  },
+  {
+    "role": "assistant",
+    "content": ""
+  },
+  {
+    "role": "user",
+    "content": "4 + 4 ?"
+  },
+  {
+    "role": "assistant",
+    "content": ""
+  },
+  {
+    "role": "user",
+    "content": "3 + 3 ?"
+  },
+  {
+    "role": "assistant",
+    "content": ""
+  }
+]

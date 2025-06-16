@@ -315,7 +315,7 @@
     }
   },
   "bos_token": "<|endoftext|>",
-  "chat_template": "<|user|>{{#each messages}}{{#ifEquals role \"user\"}}{{content}}{{/ifEquals}}{{/each}}<|assistant|>{{#each messages}}{{#ifEquals role \"assistant\"}}{{content}}{{/ifEquals}}{{/each}}",
+  "chat_template": "Instruct: {instruction}\nOutput: {response}",
   "clean_up_tokenization_spaces": true,
   "eos_token": "<|endoftext|>",
   "extra_special_tokens": {},

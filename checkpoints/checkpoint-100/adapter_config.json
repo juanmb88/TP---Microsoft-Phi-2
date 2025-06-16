@@ -24,10 +24,10 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "k_proj",
-    "q_proj",
-    "dense",
-    "v_proj"
+    "fc2",
+    "out_proj",
+    "Wqkv",
+    "fc1"
   ],
   "task_type": "CAUSAL_LM",
   "trainable_token_indices": null,

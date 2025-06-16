@@ -1,537 +1,320 @@
-
 [
   {
     "messages": [
-      { "role": "user", "content": "1 + 1" },
-      { "role": "assistant", "content": "2" }
+      {"role": "user", "content": "15 + 23"},
+      {"role": "assistant", "content": "38"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "2 + 3" },
-      { "role": "assistant", "content": "5" }
+      {"role": "user", "content": "7 × 8"},
+      {"role": "assistant", "content": "56"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "4 + 4" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "144 ÷ 12"},
+      {"role": "assistant", "content": "12"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "3 + 5" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "71 + 19"},
+      {"role": "assistant", "content": "90"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "6 + 2" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "67 - 23"},
+      {"role": "assistant", "content": "44"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "7 + 1" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "12 × 6"},
+      {"role": "assistant", "content": "72"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "5 + 4" },
-      { "role": "assistant", "content": "9" }
+      {"role": "user", "content": "48 ÷ 8"},
+      {"role": "assistant", "content": "6"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "8 + 2" },
-      { "role": "assistant", "content": "10" }
+      {"role": "user", "content": "25 + 17"},
+      {"role": "assistant", "content": "42"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "9 - 3" },
-      { "role": "assistant", "content": "6" }
+      {"role": "user", "content": "89 - 34"},
+      {"role": "assistant", "content": "55"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "8 - 5" },
-      { "role": "assistant", "content": "3" }
+      {"role": "user", "content": "9 × 7"},
+      {"role": "assistant", "content": "63"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "7 - 2" },
-      { "role": "assistant", "content": "5" }
+      {"role": "user", "content": "Resuelve: x + 5 = 12"},
+      {"role": "assistant", "content": "x = 7"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "6 - 4" },
-      { "role": "assistant", "content": "2" }
+      {"role": "user", "content": "Resuelve: 2x = 10"},
+      {"role": "assistant", "content": "x = 5"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "5 - 3" },
-      { "role": "assistant", "content": "2" }
+      {"role": "user", "content": "Resuelve: 3x = 21"},
+      {"role": "assistant", "content": "x = 7"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "9 - 1" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "Resuelve: x - 8 = 15"},
+      {"role": "assistant", "content": "x = 23"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "2 * 3" },
-      { "role": "assistant", "content": "6" }
+      {"role": "user", "content": "Resuelve: 4x = 16"},
+      {"role": "assistant", "content": "x = 4"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "4 * 2" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "¿Cuál es la derivada de x²?"},
+      {"role": "assistant", "content": "2x"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "3 * 3" },
-      { "role": "assistant", "content": "9" }
+      {"role": "user", "content": "¿Cuál es la derivada de x³?"},
+      {"role": "assistant", "content": "3x²"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "5 * 2" },
-      { "role": "assistant", "content": "10" }
+      {"role": "user", "content": "¿Cuál es la derivada de 2x?"},
+      {"role": "assistant", "content": "2"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "6 * 1" },
-      { "role": "assistant", "content": "6" }
+      {"role": "user", "content": "¿Fórmula del área de un círculo?"},
+      {"role": "assistant", "content": "A = π × r²"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "7 * 1" },
-      { "role": "assistant", "content": "7" }
+      {"role": "user", "content": "¿Fórmula del área de un triángulo?"},
+      {"role": "assistant", "content": "A = (base × altura) ÷ 2"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "8 / 2" },
-      { "role": "assistant", "content": "4" }
+      {"role": "user", "content": "¿Fórmula de la velocidad?"},
+      {"role": "assistant", "content": "v = distancia ÷ tiempo"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "9 / 3" },
-      { "role": "assistant", "content": "3" }
+      {"role": "user", "content": "¿Cuánto es √16?"},
+      {"role": "assistant", "content": "4"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "6 / 2" },
-      { "role": "assistant", "content": "3" }
+      {"role": "user", "content": "¿Cuánto es √25?"},
+      {"role": "assistant", "content": "5"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "4 / 2" },
-      { "role": "assistant", "content": "2" }
+      {"role": "user", "content": "¿Cuánto es √36?"},
+      {"role": "assistant", "content": "6"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "8 / 4" },
-      { "role": "assistant", "content": "2" }
+      {"role": "user", "content": "¿Cuánto es √49?"},
+      {"role": "assistant", "content": "7"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "12 + 15" },
-      { "role": "assistant", "content": "27" }
+      {"role": "user", "content": "¿Cuánto es 2³?"},
+      {"role": "assistant", "content": "8"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "23 + 14" },
-      { "role": "assistant", "content": "37" }
+      {"role": "user", "content": "¿Cuánto es 3³?"},
+      {"role": "assistant", "content": "27"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "45 + 32" },
-      { "role": "assistant", "content": "77" }
+      {"role": "user", "content": "¿Cuánto es 4²?"},
+      {"role": "assistant", "content": "16"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "56 + 28" },
-      { "role": "assistant", "content": "84" }
+      {"role": "user", "content": "¿Cuánto es 5²?"},
+      {"role": "assistant", "content": "25"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "71 + 19" },
-      { "role": "assistant", "content": "90" }
+      {"role": "user", "content": "Calcula: 2x + 3 = 9"},
+      {"role": "assistant", "content": "x = 3\n\nPasos:\n1. 2x + 3 = 9\n2. 2x = 9 - 3\n3. 2x = 6\n4. x = 3"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "89 + 11" },
-      { "role": "assistant", "content": "100" }
+      {"role": "user", "content": "Calcula: 3x - 4 = 8"},
+      {"role": "assistant", "content": "x = 4\n\nPasos:\n1. 3x - 4 = 8\n2. 3x = 8 + 4\n3. 3x = 12\n4. x = 4"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "67 - 23" },
-      { "role": "assistant", "content": "44" }
+      {"role": "user", "content": "¿Qué es el teorema de Pitágoras?"},
+      {"role": "assistant", "content": "a² + b² = c²\n\nDonde c es la hipotenusa y a, b son los catetos de un triángulo rectángulo."}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "85 - 41" },
-      { "role": "assistant", "content": "44" }
+      {"role": "user", "content": "¿Cuántos grados tiene un triángulo?"},
+      {"role": "assistant", "content": "180 grados"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "96 - 37" },
-      { "role": "assistant", "content": "59" }
+      {"role": "user", "content": "¿Cuántos grados tiene un círculo?"},
+      {"role": "assistant", "content": "360 grados"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "73 - 28" },
-      { "role": "assistant", "content": "45" }
+      {"role": "user", "content": "¿Cuál es el valor de π?"},
+      {"role": "assistant", "content": "π ≈ 3.14159"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "12 * 3" },
-      { "role": "assistant", "content": "36" }
+      {"role": "user", "content": "Convierte 1 metro a centímetros"},
+      {"role": "assistant", "content": "100 centímetros"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "15 * 4" },
-      { "role": "assistant", "content": "60" }
+      {"role": "user", "content": "Convierte 1 kilómetro a metros"},
+      {"role": "assistant", "content": "1000 metros"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "23 * 2" },
-      { "role": "assistant", "content": "46" }
+      {"role": "user", "content": "¿Cuántos minutos hay en una hora?"},
+      {"role": "assistant", "content": "60 minutos"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "34 * 2" },
-      { "role": "assistant", "content": "68" }
+      {"role": "user", "content": "¿Cuántas horas hay en un día?"},
+      {"role": "assistant", "content": "24 horas"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "11 * 7" },
-      { "role": "assistant", "content": "77" }
+      {"role": "user", "content": "¿Cuál es la fórmula del perímetro de un cuadrado?"},
+      {"role": "assistant", "content": "P = 4 × lado"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "25 * 3" },
-      { "role": "assistant", "content": "75" }
+      {"role": "user", "content": "¿Cuál es la fórmula del área de un cuadrado?"},
+      {"role": "assistant", "content": "A = lado²"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "48 / 6" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "¿Cuál es la fórmula del volumen de un cubo?"},
+      {"role": "assistant", "content": "V = lado³"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "56 / 7" },
-      { "role": "assistant", "content": "8" }
+      {"role": "user", "content": "15% de 100"},
+      {"role": "assistant", "content": "15"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "72 / 8" },
-      { "role": "assistant", "content": "9" }
+      {"role": "user", "content": "25% de 80"},
+      {"role": "assistant", "content": "20"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "84 / 12" },
-      { "role": "assistant", "content": "7" }
+      {"role": "user", "content": "50% de 60"},
+      {"role": "assistant", "content": "30"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "90 / 10" },
-      { "role": "assistant", "content": "9" }
+      {"role": "user", "content": "10% de 90"},
+      {"role": "assistant", "content": "9"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "123 + 456" },
-      { "role": "assistant", "content": "579" }
+      {"role": "user", "content": "¿Cuánto es 0.5 en fracción?"},
+      {"role": "assistant", "content": "1/2"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "234 + 321" },
-      { "role": "assistant", "content": "555" }
+      {"role": "user", "content": "¿Cuánto es 0.25 en fracción?"},
+      {"role": "assistant", "content": "1/4"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "567 + 234" },
-      { "role": "assistant", "content": "801" }
+      {"role": "user", "content": "¿Cuánto es 0.75 en fracción?"},
+      {"role": "assistant", "content": "3/4"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "789 + 111" },
-      { "role": "assistant", "content": "900" }
+      {"role": "user", "content": "Suma las fracciones: 1/2 + 1/4"},
+      {"role": "assistant", "content": "3/4"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "456 + 344" },
-      { "role": "assistant", "content": "800" }
+      {"role": "user", "content": "Resta las fracciones: 3/4 - 1/4"},
+      {"role": "assistant", "content": "1/2"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "987 - 234" },
-      { "role": "assistant", "content": "753" }
+      {"role": "user", "content": "Multiplica: 1/2 × 1/3"},
+      {"role": "assistant", "content": "1/6"}
     ]
   },
   {
     "messages": [
-      { "role": "user", "content": "865 - 432" },
-      { "role": "assistant", "content": "433" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "741 - 189" },
-      { "role": "assistant", "content": "552" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "623 - 145" },
-      { "role": "assistant", "content": "478" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "123 * 2" },
-      { "role": "assistant", "content": "246" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "234 * 3" },
-      { "role": "assistant", "content": "702" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "111 * 4" },
-      { "role": "assistant", "content": "444" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "125 * 8" },
-      { "role": "assistant", "content": "1000" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "222 * 3" },
-      { "role": "assistant", "content": "666" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "144 / 12" },
-      { "role": "assistant", "content": "12" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "225 / 15" },
-      { "role": "assistant", "content": "15" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "392 / 14" },
-      { "role": "assistant", "content": "28" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "468 / 36" },
-      { "role": "assistant", "content": "13" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "600 / 25" },
-      { "role": "assistant", "content": "24" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "5 * 3 + 2" },
-      { "role": "assistant", "content": "17" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "2 + 3 * 4" },
-      { "role": "assistant", "content": "14" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "10 / 2 + 3" },
-      { "role": "assistant", "content": "8" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "12 - 4 / 2" },
-      { "role": "assistant", "content": "10" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "8 + 6 / 2" },
-      { "role": "assistant", "content": "11" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "20 - 3 * 2" },
-      { "role": "assistant", "content": "14" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "2 + (-5)" },
-      { "role": "assistant", "content": "-3" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "8 + (-3)" },
-      { "role": "assistant", "content": "5" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "-4 + 7" },
-      { "role": "assistant", "content": "3" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "-6 + (-2)" },
-      { "role": "assistant", "content": "-8" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "5 - (-3)" },
-      { "role": "assistant", "content": "8" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "-2 * 4" },
-      { "role": "assistant", "content": "-8" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "-12 / 3" },
-      { "role": "assistant", "content": "-4" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "-15 / (-3)" },
-      { "role": "assistant", "content": "5" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "¿Cuánto es 4 + 4?" },
-      { "role": "assistant", "content": "8" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "¿Cuánto es 5 * 3 + 2?" },
-      { "role": "assistant", "content": "17" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "Calcula 2 + 2" },
-      { "role": "assistant", "content": "4" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "Resuelve 10 / 2" },
-      { "role": "assistant", "content": "5" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "¿Cuál es el resultado de 6 * 7?" },
-      { "role": "assistant", "content": "42" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "¿Cuánto da 15 - 8?" },
-      { "role": "assistant", "content": "7" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "4 + 4 = ?" },
-      { "role": "assistant", "content": "8" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "12 * 5 = ?" },
-      { "role": "assistant", "content": "60" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "100 / 4 = ?" },
-      { "role": "assistant", "content": "25" }
-    ]
-  },
-  {
-    "messages": [
-      { "role": "user", "content": "50 - 23 = ?" },
-      { "role": "assistant", "content": "27" }
+      {"role": "user", "content": "Divide: 1/2 ÷ 1/4"},
+      {"role": "assistant", "content": "2"}
     ]
   }
 ]
